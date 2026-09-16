@@ -46,7 +46,8 @@
             return this.openSubmenus[key] || false;
         },
         isActive(path) {
-            return window.location.pathname === path || '{{ $currentPath }}' === path.replace(/^\//, '');
+            const full = window.location.pathname + window.location.search;
+            return full === path || window.location.pathname === path || '{{ $currentPath }}' === path.replace(/^\//, '');
         }
     }"
     :class="{
@@ -57,12 +58,12 @@
     @mouseleave="$store.sidebar.setHovered(false)">
     <!-- Logo Section -->
     <div class="pt-8 pb-7 flex items-center gap-2" :class="(!$store.sidebar.isExpanded && !$store.sidebar.isHovered && !$store.sidebar.isMobileOpen) ? 'justify-center' : 'justify-between'">
-        <a href="/">
-            <div class="hidden [.sidebar-expanded_&]:block">
-                <img class="dark:hidden" src="/images/logo/logo.svg" alt="Logo" width="150" height="40" />
-                <img class="hidden dark:block" src="/images/logo/logo-dark.svg" alt="Logo" width="150" height="40" />
-            </div>
-            <img class="block [.sidebar-expanded_&]:hidden" src="/images/logo/logo-icon.svg" alt="Logo" width="32" height="32" />
+        <a href="/" class="flex items-center gap-2">
+            <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-brand-500 text-sm font-bold text-white">R</span>
+            <span class="hidden leading-tight [.sidebar-expanded_&]:block">
+                <span class="block text-base font-bold text-gray-800 dark:text-white/90">Rimbawan</span>
+                <span class="block text-[10px] font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500">Admin · RBP REDD+ GCF</span>
+            </span>
         </a>
     </div>
 
@@ -213,10 +214,5 @@
                 @endforeach
             </div>
         </nav>
-
-        <!-- Sidebar Widget -->
-        <div class="hidden [.sidebar-expanded_&]:block mt-auto">
-            @include('layouts.sidebar-widget')
-        </div>
     </div>
 </aside>

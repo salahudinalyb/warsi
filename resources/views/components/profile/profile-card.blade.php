@@ -214,7 +214,7 @@
                         Close
                     </button>
                     <button @click="saveProfile" type="button"
-                        class="flex w-full justify-center rounded-lg bg-brand-500 px-4 py-2.5 text-sm font-medium text-white hover:bg-brand-600 sm:w-auto">
+                        class="flex w-full justify-center rounded-lg bg-linear-to-b from-brand-400 to-brand-600 px-4 py-2.5 text-sm font-medium text-white transition-all duration-150 hover:from-brand-500 hover:to-brand-700 hover:shadow-lg hover:shadow-brand-500/25 active:scale-[0.97] sm:w-auto">
                         Save Changes
                     </button>
                 </div>

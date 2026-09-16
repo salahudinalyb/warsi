@@ -11,7 +11,7 @@ export const initChartOne = () => {
         },],
         colors: ["#465fff"],
         chart: {
-            fontFamily: "Outfit, sans-serif",
+            fontFamily: "Manrope, sans-serif",
             type: "bar",
             height: 180,
             toolbar: {
@@ -60,7 +60,7 @@ export const initChartOne = () => {
             show: true,
             position: "top",
             horizontalAlign: "left",
-            fontFamily: "Outfit",
+            fontFamily: "Manrope",
             markers: {
                 radius: 99,
             },

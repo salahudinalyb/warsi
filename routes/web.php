@@ -2,15 +2,34 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LocaleController;
+use App\Http\Controllers\RoleController;
+use App\Http\Controllers\PublicController;
+use App\Http\Controllers\WorkspaceController;
 
 // Locale Switch Route
 Route::get('/locale/{locale}', [LocaleController::class, 'switch'])->name('locale.switch');
+
+// Role switch (simulated — real auth/login still open per PRD Bagian 7)
+Route::post('/role/{role}', [RoleController::class, 'switch'])->name('role.switch');
+
+// Rimbawan — public site
+Route::get('/', [PublicController::class, 'beranda'])->name('beranda');
+Route::get('/dashboard', [PublicController::class, 'dashboard'])->name('dashboard');
+
+// Rimbawan — Ruang Kerja (Operator/Admin)
+Route::middleware('workspace.role')->prefix('workspace')->group(function () {
+    Route::get('/', [WorkspaceController::class, 'index'])->name('workspace.index');
+    Route::post('/', [WorkspaceController::class, 'store'])->name('workspace.store');
+    Route::post('/{lokasi}/approve', [WorkspaceController::class, 'approve'])->name('workspace.approve');
+    Route::post('/{lokasi}/reject', [WorkspaceController::class, 'reject'])->name('workspace.reject');
+});
+
 use App\Http\Controllers\DashboardController;
 
-// dashboard pages
-Route::get('/', function () {
+// TailAdmin demo dashboard (kept as component reference)
+Route::get('/demo', function () {
     return view('pages.dashboard.ecommerce', ['title' => 'E-commerce Dashboard']);
-})->name('dashboard');
+})->name('demo.dashboard');
 
 // calender pages
 Route::get('/calendar', function () {

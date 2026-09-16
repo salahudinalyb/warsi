@@ -123,7 +123,7 @@
                                     <!-- Button -->
                                     <div>
                                         <button
-                                            class="bg-brand-500 shadow-theme-xs hover:bg-brand-600 flex w-full items-center justify-center rounded-lg px-4 py-3 text-sm font-medium text-white transition">
+                                            class="bg-linear-to-b from-brand-400 to-brand-600 shadow-theme-xs hover:from-brand-500 hover:to-brand-700 hover:shadow-lg hover:shadow-brand-500/25 active:scale-[0.97] flex w-full items-center justify-center rounded-lg px-4 py-3 text-sm font-medium text-white transition">
                                             Sign In
                                         </button>
                                     </div>

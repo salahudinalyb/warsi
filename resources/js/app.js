@@ -25,6 +25,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (document.querySelector('#mapOne')) {
         import('./components/map').then(module => module.initMap());
     }
+    if (document.querySelector('#mapSebaran')) {
+        import('./components/map-sebaran').then(module => module.initMapSebaran());
+    }
 
     // Chart imports
     if (document.querySelector('#chartOne')) {
@@ -44,6 +47,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     if (document.querySelector('#chartThirteen')) {
         import('./components/chart/chart-13').then(module => module.initChartThirteen());
+    }
+    if (document.querySelector('#chartEmisiTereduksi')) {
+        import('./components/chart/chart-emisi').then(module => module.initChartEmisi());
+    }
+    if (document.querySelector('#chartKategori')) {
+        import('./components/chart/chart-kategori').then(module => module.initChartKategori());
+    }
+    if (document.querySelector('#chartWilayah')) {
+        import('./components/chart/chart-wilayah').then(module => module.initChartWilayah());
+    }
+    if (document.querySelector('[data-reveal], [data-count-to]')) {
+        import('./components/reveal').then(module => module.initReveal());
     }
 
     // Calendar init
