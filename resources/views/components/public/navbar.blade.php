@@ -7,7 +7,9 @@
 <header class="sticky top-0 z-40 border-b border-gray-200 bg-white dark:border-gray-800 dark:bg-gray-900">
     <div class="mx-auto flex h-16 max-w-(--breakpoint-2xl) items-center gap-6 px-4 md:px-6">
         <a href="{{ url('/') }}" class="flex shrink-0 items-center gap-2 font-bold text-gray-800 dark:text-white/90">
-            <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-brand-500 text-white">R</span>
+            <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-brand-500 text-white">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 10 13.5 10 13.5"/></svg>
+            </span>
             <span class="leading-tight">
                 <span class="block text-base">Rimbawan</span>
                 <span class="block text-[10px] font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500">RBP REDD+ GCF · Sumbar</span>

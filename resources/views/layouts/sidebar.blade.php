@@ -59,7 +59,9 @@
     <!-- Logo Section -->
     <div class="pt-8 pb-7 flex items-center gap-2" :class="(!$store.sidebar.isExpanded && !$store.sidebar.isHovered && !$store.sidebar.isMobileOpen) ? 'justify-center' : 'justify-between'">
         <a href="/" class="flex items-center gap-2">
-            <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-brand-500 text-sm font-bold text-white">R</span>
+            <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-brand-500 text-white">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 10 13.5 10 13.5"/></svg>
+            </span>
             <span class="hidden leading-tight [.sidebar-expanded_&]:block">
                 <span class="block text-base font-bold text-gray-800 dark:text-white/90">Rimbawan</span>
                 <span class="block text-[10px] font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500">Admin · RBP REDD+ GCF</span>

@@ -5,7 +5,9 @@
         <div class="grid gap-x-12 gap-y-12 sm:grid-cols-[1.4fr_1fr_1fr]">
             <div>
                 <a href="{{ url('/') }}" class="flex items-center gap-2 font-bold text-gray-800 dark:text-white/90">
-                    <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-brand-500 text-sm text-white">R</span>
+                    <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-brand-500 text-white">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 10 13.5 10 13.5"/></svg>
+                    </span>
                     <span class="text-base">Rimbawan</span>
                 </a>
                 <p class="mt-4 max-w-[34ch] text-sm italic text-gray-500 dark:text-gray-400">Merajut satu cerita untuk hutan Sumatera Barat.</p>

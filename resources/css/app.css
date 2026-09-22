@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap') layer(base);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap') layer(base);
 @import 'prismjs/themes/prism.min.css';
 @import 'tailwindcss';
 
@@ -13,7 +13,7 @@
 
 @theme {
   --font-*: initial;
-  --font-outfit: Manrope, sans-serif;
+  --font-outfit: Montserrat, sans-serif;
 
   --breakpoint-*: initial;
   --breakpoint-2xsm: 375px;
