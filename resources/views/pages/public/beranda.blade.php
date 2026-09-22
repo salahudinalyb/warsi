@@ -20,8 +20,8 @@
                     <span class="h-1.5 w-1.5 rounded-full bg-brand-500"></span>
                     Sistem Data &amp; Pengetahuan Program
                 </div>
-                <h1 class="animate-fade-up max-w-[16ch] text-title-lg font-extrabold leading-[1.02] tracking-tight text-gray-800 dark:text-white/90 md:text-title-xl" style="animation-delay:80ms">
-                    Satu rujukan data kehutanan <span class="text-brand-500">&amp;</span> capaian program REDD+ Sumatera Barat.
+                <h1 class="animate-fade-up max-w-[22ch] text-title-md font-extrabold leading-[1.08] tracking-tight text-gray-800 dark:text-white/90 md:text-title-lg" style="animation-delay:80ms">
+                    Sistem Database dan Pengelolaan Pengetahuan <span class="text-brand-500">Program RBP REDD+ GCF Output 2</span> Provinsi Sumatera Barat
                 </h1>
                 <p class="animate-fade-up mt-5 max-w-[46ch] text-[15.5px] leading-relaxed text-gray-500 dark:text-gray-400" style="animation-delay:160ms">
                     Mengonsolidasikan data kehutanan, program, dan monitoring KKI WARSI yang sebelumnya tersebar — supaya tim, mitra, dan publik melihat capaian yang sama.
