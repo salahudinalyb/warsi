@@ -130,7 +130,7 @@
                         <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h10M4 18h6"/></svg>
                         Kategori
                     </span>
-                    <div class="flex gap-1.5">
+                    <div class="flex flex-wrap gap-1.5">
                         @php $kDot = ['hutan' => '#318454', 'program' => '#A06024', 'monitoring' => '#3077AD']; @endphp
                         @foreach ($kategoriLabel as $key => $label)
                             <button @click="activeCats.{{ $key }} = !activeCats.{{ $key }}"
@@ -143,14 +143,14 @@
                     </div>
                 </div>
 
-                <div class="h-9 w-px bg-gray-200 dark:bg-gray-700"></div>
+                <div class="hidden h-9 w-px bg-gray-200 sm:block dark:bg-gray-700"></div>
 
-                <div class="flex flex-col gap-1.5">
+                <div class="flex w-full flex-col gap-1.5 sm:w-auto">
                     <span class="flex items-center gap-1 text-[10.5px] font-bold uppercase tracking-wide text-gray-400 dark:text-gray-500">
                         <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.5-7-11a7 7 0 1 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
                         Wilayah
                     </span>
-                    <x-form.native-select x-model="wilayah" class="w-56">
+                    <x-form.native-select x-model="wilayah" class="w-full sm:w-56">
                         <option value="all">Semua kabupaten/kota</option>
                         @foreach ($wilayahList as $w)
                             <option value="{{ $w }}">{{ $w }}</option>
@@ -158,12 +158,12 @@
                     </x-form.native-select>
                 </div>
 
-                <div class="flex flex-col gap-1.5">
+                <div class="flex w-full flex-col gap-1.5 sm:w-auto">
                     <span class="flex items-center gap-1 text-[10.5px] font-bold uppercase tracking-wide text-gray-400 dark:text-gray-500">
                         <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
                         Periode
                     </span>
-                    <x-form.native-select x-model="periode" class="w-40">
+                    <x-form.native-select x-model="periode" class="w-full sm:w-40">
                         <option value="all">Sepanjang 2026</option>
                         <option value="q1">Jan–Mar 2026</option>
                         <option value="q2">Apr–Jun 2026</option>
@@ -171,27 +171,27 @@
                     </x-form.native-select>
                 </div>
 
-                <div class="flex flex-col gap-1.5">
+                <div class="flex w-full flex-col gap-1.5 sm:w-auto">
                     <span class="flex items-center gap-1 text-[10.5px] font-bold uppercase tracking-wide text-gray-400 dark:text-gray-500">
                         <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11M3 12h7M3 17h4M17 4v16M17 4l3 3M17 4l-3 3"/></svg>
                         Urutkan
                     </span>
-                    <x-form.native-select x-model="sort" class="w-36">
+                    <x-form.native-select x-model="sort" class="w-full sm:w-36">
                         <option value="terbaru">Terbaru</option>
                         <option value="nama">Nama A–Z</option>
                         <option value="luas">Luas terbesar</option>
                     </x-form.native-select>
                 </div>
 
-                <div class="flex flex-col gap-1.5">
+                <div class="flex w-full flex-col gap-1.5 sm:w-auto">
                     <span class="text-[10.5px] font-bold uppercase tracking-wide text-gray-400 dark:text-gray-500">Cari lokasi</span>
                     <div class="relative">
                         <svg class="pointer-events-none absolute left-2.5 top-1/2 -translate-y-1/2 text-gray-400" width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="9" r="6"/><path d="M17 17l-3.5-3.5" stroke-linecap="round"/></svg>
-                        <input type="search" x-model="search" placeholder="nama titik / desa…" class="h-9 rounded-lg border border-gray-200 bg-white pl-8 pr-2.5 text-sm text-gray-700 outline-none transition-colors focus:border-brand-300 focus:ring-3 focus:ring-brand-500/10 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300">
+                        <input type="search" x-model="search" placeholder="nama titik / desa…" class="h-9 w-full rounded-lg border border-gray-200 bg-white pl-8 pr-2.5 text-sm text-gray-700 outline-none transition-colors focus:border-brand-300 focus:ring-3 focus:ring-brand-500/10 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300">
                     </div>
                 </div>
 
-                <button @click="resetFilters()" class="ml-auto text-xs font-semibold text-brand-500 transition-colors hover:underline active:scale-95">Reset filter</button>
+                <button @click="resetFilters()" class="ms-auto text-xs font-semibold text-brand-500 transition-colors hover:underline active:scale-95">Reset filter</button>
             </div>
         </div>
     </div>
